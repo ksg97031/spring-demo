@@ -16,9 +16,8 @@ $ chmod +x test.sh
 $ ./test.sh
 ```
 
-### Output
+Output
 ```
-./test.sh
 HTTP/1.1 200
 Connection: keep-alive
 Content-Length: 11
