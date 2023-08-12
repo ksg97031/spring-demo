@@ -1,11 +1,20 @@
 package com.example.demo.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class TestController {
+@RequestMapping("/test2")
+public class TestController2 {
+    @RequestMapping(method = RequestMethod.GET)
+    public String getNoValue() {
+        return "No value";
+    }
+
+    @PostMapping()
+    public String postNoValue() {
+        return "No value";
+    }
+
     @GetMapping("/abcd")
     public String getMapping() {
         return "@GetMapping";
@@ -61,4 +70,4 @@ public class TestController {
         return "@GetMapping(\"/regex/{number:^[0-9]+$}\"); number=" + number;
     }
 
-}ÿ
+}
